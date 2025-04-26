@@ -1,0 +1,66 @@
+Test Results for Model: 1D_1xLSTM32_id1_ws30.h5
+Data: id1_WS30.h5
+Window Size: 30
+Timestamp: 2025-04-25 13:03:20
+==================================================
+Loading model from: 1D_1xLSTM32_id1_ws30.h5
+Model loaded successfully
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv1d (Conv1D)                      │ (None, 29, 32)              │             416 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ lstm (LSTM)                          │ (None, 29, 32)              │           8,320 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 29, 32)              │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ flatten (Flatten)                    │ (None, 928)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 2)                   │           1,858 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 10,596 (41.39 KB)
+ Trainable params: 10,594 (41.38 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 2 (12.00 B)
+Loading validation data from: id1_WS30.h5
+    
+
+======= Evaluating model on Class 0 validation data =======
+Loss on class 0 data: 0.13005515933036804, Accuracy: 93.11%
+True Negatives (correctly predicted class 0): 554
+False Positives (class 0 predicted as class 1): 41
+
+Sample predictions for class 0:
+Sample 0: Probabilities [1.000000e+00 2.336511e-09], True: 0.0, Predicted: 0
+Sample 1: Probabilities [9.9999797e-01 1.9996055e-06], True: 0.0, Predicted: 0
+Sample 2: Probabilities [0.38151    0.61849004], True: 0.0, Predicted: 1
+Sample 3: Probabilities [0.9824102  0.01758985], True: 0.0, Predicted: 0
+Sample 4: Probabilities [9.995684e-01 4.315465e-04], True: 0.0, Predicted: 0
+
+
+======= Evaluating model on Class 1 validation data =======
+Loss on class 1 data: 0.1921902298927307, Accuracy: 94.32%
+True Positives (correctly predicted class 1): 382
+False Negatives (class 1 predicted as class 0): 23
+
+Sample predictions for class 1:
+Sample 0: Probabilities [0.8909378  0.10906222], True: 1.0, Predicted: 0
+Sample 1: Probabilities [1.6501554e-08 1.0000000e+00], True: 1.0, Predicted: 1
+Sample 2: Probabilities [0.2621505 0.7378495], True: 1.0, Predicted: 1
+Sample 3: Probabilities [0.0224598  0.97754025], True: 1.0, Predicted: 1
+Sample 4: Probabilities [0.01005567 0.98994434], True: 1.0, Predicted: 1
+
+
+======= Combined evaluation metrics =======
+Overall Loss: 0.15521985292434692, Overall Accuracy: 93.60%
+Precision: 90.31%
+Recall: 94.32%
+F1 Score: 92.27%
+
+----- Biometric Security Metrics -----
+FAR (False Acceptance Rate): 6.89%
+FRR (False Rejection Rate): 5.68%
+EER (Equal Error Rate approximation): 6.28%
+Confusion matrix saved to: confusion_matrix_20250425_130320.png
+FAR vs FRR plot saved to: far_frr_20250425_130320.png
