@@ -10,9 +10,7 @@ This an implemenatation of Continuous authentication by free-text keystroke base
 - **model.py**: Contains code to build, train, and evaluate LSTM neural network models
 - **test_model.py**: Provides functionality to test trained models and evaluate their performance metrics
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - Python 3.x
 - TensorFlow
@@ -21,9 +19,20 @@ This an implemenatation of Continuous authentication by free-text keystroke base
 - h5py
 - matplotlib
 
-### Dataset
+## Dataset
 
 University of Buffalo Keystroke dataset was used for training the model. It is not included for privacy concerns.
+
+## Tutorial
+
+Run the python scripts in the order described in Project Structure. Make sure that all the files gets fetched or stored in root directory
+
+## References
+
+Yan Sun, Hayreddin Ceker and Shambhu Upadhyaya, “Shared Keystroke Dataset for Continuous Authentication”, 8th IEEE International Workshop on Information Forensics and Security, Abu Dhabi, UAE, December 2016.
+
+Xiaofeng Lu, Shengfei Zhang, Pan Hui and Pietro Lio, "Continuous authentication by free-text keystroke based on CNN and RNN", 2020.
+
 
 
 
